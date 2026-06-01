@@ -1,0 +1,20 @@
+# Expense Tracker
+
+total = 0.0
+
+print("===== EXPENSE TRACKER =====")
+
+while True:
+    expense = input("Enter expense amount (or type 'done' to finish): ")
+
+    if expense.lower() == "done":
+        break
+
+    try:
+        expense = float(expense)
+        total = total + expense    # Accumulator logic
+    except ValueError:
+        print("Please enter a valid amount.")
+
+print("\n===== EXPENSE SUMMARY =====")
+print("Total Spent =", total)
